@@ -7,20 +7,24 @@ const BlogPost = ({ post }) => {
 
   return (
     <Link href={`${BLOG.path}/${post.slug}`}>
-      <article key={post.id} className="mb-6 md:mb-8">
-        <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-          <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100">
+      <article key={post.id} className="mb-2 md:mb-5">
+        <header className="flex flex-col justify-between md:items-baseline">
+          <h2 className="text-lg md:text-xl font-medium  cursor-pointer text-black dark:text-gray-100">
             {post.title}
           </h2>
-          <time className="flex-shrink-0 text-gray-600 dark:text-gray-400">
+         <p className="flex">{post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-block bg-gray-100 dark:bg-gray-800  rounded-md px-1 py-[2px]  text-[10px] font-semibold text-gray-700 dark:text-gray-300 mb-1 mr-2"
+            >
+              {tag}
+            </span>
+          ))}</p>
+
+          <time className="flex-shrink-0  text-xs text-gray-500 dark:text-gray-400">
             <FormattedDate date={post.date} />
           </time>
         </header>
-        <main>
-          <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
-            {post.summary}
-          </p>
-        </main>
       </article>
     </Link>
   );
