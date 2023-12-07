@@ -10,6 +10,12 @@ const NavBar = () => {
   const locale = useLocale();
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || "/", show: true },
+    {
+      id: 1,
+      name: 'about',
+      to: "https://buycoffee.top",
+      show: true,
+    },
   ];
   return (
     <div className="flex-shrink-0">
@@ -25,9 +31,10 @@ const NavBar = () => {
                 <Link href={link.to} target={link.external ? "_blank" : null}>
                   {link.name}
                 </Link>
-                <span
-                  className="h-2 w-2 bg-green-500 rounded-full ml-1" // 绿点样式
-                ></span>
+                {link.id === 0 && (<span
+                  className="h-2 w-2 bg-yellow-500 rounded-full ml-1" // 绿点样式
+                ></span>)}
+
 
               </li>
             ),
