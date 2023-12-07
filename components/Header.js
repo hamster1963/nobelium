@@ -20,10 +20,15 @@ const NavBar = () => {
               <li
                 key={link.id}
                 className="block ml-4 text-black font-medium dark:text-gray-50 nav"
+                style={{ display: "flex", alignItems: "center" }} // 让文本和绿点垂直居中
               >
                 <Link href={link.to} target={link.external ? "_blank" : null}>
                   {link.name}
                 </Link>
+                <span
+                  className="h-2 w-2 bg-green-500 rounded-full ml-1" // 绿点样式
+                ></span>
+
               </li>
             ),
         )}
