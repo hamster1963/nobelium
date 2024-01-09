@@ -18,6 +18,8 @@ class MyDocument extends Document {
     return (
       <Html lang={config.lang} className={cn(initialColorScheme)}>
         <Head>
+          <script async src="https://umami.buycoffee.top/script.js"
+                  data-website-id="ba28583e-f5e5-4422-9eeb-4e5eacdd6261"></script>
           {config.font && config.font === "serif" ? (
             <>
               <link
@@ -86,7 +88,7 @@ class MyDocument extends Document {
               </noscript>
             </>
           )}
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon.png"/>
           <link
             rel="alternate"
             type="application/rss+xml"
@@ -132,8 +134,8 @@ class MyDocument extends Document {
           </style>
         </Head>
         <body className="bg-day dark:bg-night">
-          <Main />
-          <NextScript />
+        <Main/>
+        <NextScript/>
         </body>
       </Html>
     );
