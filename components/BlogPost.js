@@ -15,13 +15,13 @@ const BlogPost = ({ post }) => {
          <p className="flex">{post.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-block bg-stone-200 bg-opacity-80 dark:bg-gray-800  rounded-md px-1 py-[2px]  text-[10px] font-semibold text-gray-700 dark:text-gray-300 mb-1 mr-2"
+              className="inline-block bg-stone-200 bg-opacity-80 dark:bg-stone-800   rounded-md px-1 py-[2px]  text-[10px] font-semibold text-black  dark:text-white mb-1 mr-2"
             >
               {tag}
             </span>
           ))}</p>
 
-          <time className="flex-shrink-0  text-xs text-gray-500 dark:text-gray-400">
+          <time className="flex-shrink-0 text-xs text-black text-opacity-80 dark:text-white">
             <FormattedDate date={post.date} />
           </time>
         </header>

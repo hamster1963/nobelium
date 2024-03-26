@@ -1,5 +1,6 @@
 /* NOTION CSS OVERRIDE */
 
+
 :root {
   --no-leading: 2rem;
 
@@ -24,6 +25,10 @@
   --notion-purple_background: rgba(244, 240, 247, 0.8);
   --notion-pink_background: rgba(249, 238, 243, 0.8);
   --notion-red_background: rgb(253, 235, 236);
+
+  --select-color-0: rgba(241, 196, 24, 0.2);
+  --select-color-1: rgba(241, 196, 24, 0.2);
+  --select-color-2: rgba(241, 196, 24, 0.2);
 }
 
 :root.dark {
@@ -48,10 +53,24 @@
   --notion-purple_background: rgb(60, 45, 73);
   --notion-pink_background: rgb(78, 44, 60);
   --notion-red_background: rgb(82, 46, 42);
+
+  --select-color-0: rgba(241, 196, 24, 0.2);
+  --select-color-1: rgba(241, 196, 24, 0.2);
+  --select-color-2: rgba(241, 196, 24, 0.2);
 }
 
+::selection {
+  background: rgba(241, 196, 24, 0.2); /* 背景颜色 */
+}
+
+.medium-zoom-image {
+  border-radius: 10px;
+}
+
+
+
 .notion {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-black text-opacity-80 dark:text-white dark:text-opacity-80;
   overflow-wrap: break-word;
 }
 
@@ -120,7 +139,7 @@ pre[class*="language-"] {
 }
 .notion-asset-caption {
   @apply text-center;
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-black text-opacity-60  dark:text-white dark:text-opacity-60;
 }
 .notion-asset-wrapper-tweet iframe {
   @apply bg-day dark:bg-night;
